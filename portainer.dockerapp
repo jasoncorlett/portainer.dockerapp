@@ -1,0 +1,23 @@
+version: 0.1.0
+name: portainer
+description: 
+namespace: jasoncorlett
+---
+version: '3.5'
+
+services:
+    portainer:
+        image: portainer/portainer
+        ports:
+        - "${PORT}:9000"
+        volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+        - portainer_data:/data
+
+volumes:
+    portainer_data: ~
+
+
+---
+PORT: 8111
+
