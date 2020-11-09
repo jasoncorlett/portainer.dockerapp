@@ -19,6 +19,12 @@ nimbusapp jasoncorlett/portainer:latest up
 ### With Docker-app and Compose
 
 ```
-docker-app jasoncorlett/portainer:latest render | docker-compose -p portainer up -d
+docker-app jasoncorlett/portainer:latest render | docker-compose -p portainer -f - up -d
 ```
 
+OR
+
+```
+docker-app jasoncorlett/portainer:latest render > docker-compose.yml
+docker-compose up -d
+```

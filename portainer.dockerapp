@@ -7,7 +7,7 @@ version: '3.5'
 
 services:
     portainer:
-        image: portainer/portainer
+        image: portainer/portainer-ce:2.0.0
         ports:
         - "${PORT}:9000"
         volumes:
@@ -16,7 +16,6 @@ services:
 
 volumes:
     portainer_data: ~
-
 
 ---
 PORT: 8111
