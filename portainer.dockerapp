@@ -1,13 +1,13 @@
-version: 0.1.0
+version: 2.13.1
 name: portainer
-description: 
+description: Dockerapp wrapper for portainer
 namespace: jasoncorlett
 ---
 version: '3.5'
 
 services:
     portainer:
-        image: portainer/portainer-ce:2.0.0
+        image: portainer/portainer-ce:2.13.1
         ports:
         - "${PORT}:9000"
         volumes:
